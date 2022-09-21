@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Cylinder {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		/**메소드로 배열 전달하기 **/
+		/** N개의 정수가 주어진다. 최솟값과 최댓값 구하기**/
+	
+		int c = scanner.nextInt();
+		for (int i = 0; i < c; i++) {
+			int student = scanner.nextInt();
+			int score[] = new int[student];
+			int sum =0;
+			for (int j = 0; j < student; j++) {
+				score[j] = scanner.nextInt();
+			sum = sum + score[j];
+			}
+			float average = (float)sum / (float)student;
+			int count = 0;
+			for (int j = 0; j <score.length; j++) {
+				if(score[j] > average) count++;
+			}
+			System.out.printf("%.3f%%", (float)count / (float)score.length * 100);
+			System.out.println();
+		}
+	}
+}
