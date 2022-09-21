@@ -9,15 +9,15 @@ public class Cylinder {
 		/**메소드로 배열 전달하기 **/
 		/** 9개의 정수가 주어진다. 최댓값과 번호**/
 		
-		int number [] = new int[9];
+		int [] number  = new int[9]; 
 		int max = 0;
 		int n = 0;
 		
-		for (int i = 0; i < 9; i++) {
-			number[i] = scanner.nextInt();
+		for (int i = 0; i < 9; i++) { 
+			number[i] = scanner.nextInt(); //숫지를 입력받아//
 			if(max < number[i]) {
 				max = number[i];
-				n = i+1;
+				n = i+1; //0부터 시작하기 떄문에 1을 더해준다//
 			}
 		}
 	System.out.println(max);
