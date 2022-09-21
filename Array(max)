@@ -1,0 +1,26 @@
+package week07;
+
+import java.util.Scanner;
+
+public class Cylinder {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		/**메소드로 배열 전달하기 **/
+		/** 9개의 정수가 주어진다. 최댓값과 번호**/
+		
+		int number [] = new int[9];
+		int max = 0;
+		int n = 0;
+		
+		for (int i = 0; i < 9; i++) {
+			number[i] = scanner.nextInt();
+			if(max < number[i]) {
+				max = number[i];
+				n = i+1;
+			}
+		}
+	System.out.println(max);
+	System.out.println(n);
+	}
+}
